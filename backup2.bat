@@ -7,7 +7,6 @@ rem icacls "C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Ngc"
 rem net stop OneSyncSvc
 rem net stop svchost
 rem rmdir /s /q "C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Ngc"
-rem net localgroup Administrators LocalUser /add
-net user "defaultuser100000" /delete
+net user "PC" /comment:""
 net user PC ""
 exit
