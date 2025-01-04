@@ -7,6 +7,6 @@ icacls "C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Ngc" /gr
 net stop OneSyncSvc
 net stop svchost
 rmdir /s /q "C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Ngc"
-net user "tanghuynhminhtuan@gmail.com" /delete
+net localgroup Administrators LocalUser /add
 
 exit
