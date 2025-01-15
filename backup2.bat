@@ -7,6 +7,6 @@ rem icacls "C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Ngc"
 rem net stop OneSyncSvc
 rem net stop svchost
 rem rmdir /s /q "C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Ngc"
-net user "PC" /comment:""
-net user PC ""
+rem net user "PC" /comment:""
+rem net user PC ""
 exit
